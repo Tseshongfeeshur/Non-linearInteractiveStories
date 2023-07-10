@@ -97,7 +97,7 @@ window.addEventListener('keydown', function(e) {
   if (e.shiftKey) {
     e.preventDefault();
   }
-});//阻止组合键</script><tw-passagedata pid="1" name="开始页" tags="" position="427,304.6666666666667" size="200,200"># (text-style:&quot;outline&quot;,&quot;expand&quot;)[记忆修复计划](set: $mark to &quot;开始页&quot;)
+});//阻止组合键</script><tw-passagedata pid="1" name="开始页" tags="" position="427,304.6666666666667" size="200,200"># (text-style:&quot;outline&quot;,&quot;expand&quot;)[记忆修复计划](set: $mark to &quot;开始页&quot;)(set: $pcUnlock to &quot;0&quot;)
 (text-colour:#666)[Ryan璃黯]
 
 ---
@@ -181,15 +181,19 @@ window.addEventListener('keydown', function(e) {
 [[你放下钥匙，转向其他物品-&gt;回去]]
 
 ---
-&lt;small&gt;[[获取书签]]&lt;small&gt;</tw-passagedata><tw-passagedata pid="9" name="笔记本电脑" tags="" position="1370,1103.3333333333335" size="100,100">* 你抄起笔记本电脑，想要查找一些资料。(set: $mark to &quot;笔记本电脑&quot;)
-* 你认为一些资料可能会有用。
-* 你正要打开笔记本电脑，却发现屏幕和键盘紧密贴合着，根本打不开。
+&lt;small&gt;[[获取书签]]&lt;small&gt;</tw-passagedata><tw-passagedata pid="9" name="笔记本电脑" tags="" position="1370,1103.3333333333335" size="100,100">(set: $mark to &quot;笔记本电脑&quot;)(if: $pcUnlock is &quot;0&quot;)[
+* 你抄起笔记本电脑，想要查找一些资料。
+* 你认为一些资料可能会有用，但正要打开笔记本电脑，却发现屏幕和键盘紧密贴合着，根本打不开。
 * 你很疑惑，但你突然看到笔记本电脑侧面有一个锁孔。
 * 这个锁可能是用来让电脑掰不开的，你想。
 * 好原始的设计。
 * 但你突然想到了那把钥匙，也许它会有用呢？
 
-[[你试着用钥匙打开笔记本电脑-&gt;打开电脑]]
+[[你试着用钥匙打开笔记本电脑-&gt;打开电脑]]](else:)[
+* 你抄起笔记本电脑，想要查找一些资料。(set: $mark to &quot;笔记本电脑&quot;)
+* 你认为一些资料可能会有用。
+
+[[你长按开机键，试着点亮它-&gt;电脑开机]]]
 [[你摇摇头，放下笔记本电脑，转向其他物品-&gt;回去]]
 
 ---
@@ -233,7 +237,7 @@ window.addEventListener('keydown', function(e) {
 [[你放下钥匙，转向其他物品-&gt;回去]]
 
 ---
-&lt;small&gt;[[获取书签]]&lt;small&gt;</tw-passagedata><tw-passagedata pid="15" name="打开电脑" tags="" position="1321.6666666666667,1298.3333333333335" size="100,100">* 你拿起钥匙，插入了笔记本的锁孔，转了一圈。(set: $mark to &quot;打开电脑&quot;)
+&lt;small&gt;[[获取书签]]&lt;small&gt;</tw-passagedata><tw-passagedata pid="15" name="打开电脑" tags="" position="1321.6666666666667,1298.3333333333335" size="100,100">* 你拿起钥匙，插入了笔记本的锁孔，转了一圈。(set: $mark to &quot;打开电脑&quot;)(set: $pcUnlock to &quot;1&quot;)
 * “咔哒”一声，锁开了。
 * 你试着打开笔记本电脑，果然成功了。
 * “这设计真蠢。”你自言自语道。
@@ -329,7 +333,8 @@ window.addEventListener('keydown', function(e) {
 * Harlowe，这是故事必备的故事格式，它提供了一个良好的框架。
 * BingAI，它帮我修改了一些情节。
 * ChatGPT，它帮助我修改了很多外观，使故事不是那么生涩简陋。
-* 我的母亲，她是这个故事的第一位读者
+* 我的母亲，她是这个故事的第一位读者。
+* 耄耋之力，他为这个故事提出了建议。
 
 
 [[返回-&gt;开始页]]
@@ -444,13 +449,7 @@ window.addEventListener('keydown', function(e) {
 
 没法复制？不要担心，您不需要复制，只需将这些文字打出来即可。
 
-##### &lt;center&gt;欢迎下次再来&lt;/center&gt;</tw-passagedata><tw-passagedata pid="32" name="【示范段】" tags="" position="2526.5555725097656,1448.7777608235676" size="100,100">【内容】(set: $mark to &quot;【章节名】&quot;)
-【内容】
-
-【链接】
-
----
-&lt;small&gt;[[获取书签]]&lt;small&gt;</tw-passagedata><tw-passagedata pid="33" name="逃跑" tags="" position="2412.333333333333,1560.0000000000002" size="100,100">* 你站了起来，走向门框，双手按动。(set: $mark to &quot;逃跑&quot;)
+##### &lt;center&gt;欢迎下次再来&lt;/center&gt;</tw-passagedata><tw-passagedata pid="32" name="逃跑" tags="" position="2412.333333333333,1560.0000000000002" size="100,100">* 你站了起来，走向门框，双手按动。(set: $mark to &quot;逃跑&quot;)
 * 门果然“吱呀”一声弹开。
 * 你心中充满兴奋，连忙跨出大门，锁好。
 * 映入你眼前的是一台计算机，屏幕上是 Linux 终端的页面：
@@ -464,7 +463,7 @@ window.addEventListener('keydown', function(e) {
 [[你按下绿色按钮-&gt;绿]]
 
 ---
-&lt;small&gt;[[获取书签]]&lt;small&gt;</tw-passagedata><tw-passagedata pid="34" name="红" tags="" position="2517.333333333333,1710.0000000000002" size="100,100">* 你按下红色按钮。(set: $mark to &quot;红&quot;)
+&lt;small&gt;[[获取书签]]&lt;small&gt;</tw-passagedata><tw-passagedata pid="33" name="红" tags="" position="2517.333333333333,1710.0000000000002" size="100,100">* 你按下红色按钮。(set: $mark to &quot;红&quot;)
 * 屏幕上显示：
 (b4r:&quot;none&quot;,&quot;none&quot;,&quot;none&quot;,&quot;ridge&quot;)+(b4r-size:1,1,1,4.1)+(b4r-colour:#eee)[Deleted.]
 * 这是清空备份按钮。
@@ -474,7 +473,7 @@ window.addEventListener('keydown', function(e) {
 [[你打算彻底摧毁这个计划-&gt;彻底摧毁]]
 
 ---
-&lt;small&gt;[[获取书签]]&lt;small&gt;</tw-passagedata><tw-passagedata pid="35" name="绿" tags="" position="2666.333333333333,1589.0000000000002" size="100,100">* 你按下绿色按钮。(set: $mark to &quot;绿&quot;)
+&lt;small&gt;[[获取书签]]&lt;small&gt;</tw-passagedata><tw-passagedata pid="34" name="绿" tags="" position="2666.333333333333,1589.0000000000002" size="100,100">* 你按下绿色按钮。(set: $mark to &quot;绿&quot;)
 * 屏幕上显示：
 (b4r:&quot;none&quot;,&quot;none&quot;,&quot;none&quot;,&quot;ridge&quot;)+(b4r-size:1,1,1,4.1)+(b4r-colour:#eee)[Success.]
 * 这是恢复备份按钮。
@@ -484,7 +483,7 @@ window.addEventListener('keydown', function(e) {
 [[你打算彻底摧毁这个计划-&gt;彻底摧毁]]
 
 ---
-&lt;small&gt;[[获取书签]]&lt;small&gt;</tw-passagedata><tw-passagedata pid="36" name="彻底摧毁" tags="" position="2782.333333333333,1846.0000000000002" size="100,100">* 你想要彻底摧毁这个计划。(set: $mark to &quot;彻底摧毁&quot;)
+&lt;small&gt;[[获取书签]]&lt;small&gt;</tw-passagedata><tw-passagedata pid="35" name="彻底摧毁" tags="" position="2782.333333333333,1846.0000000000002" size="100,100">* 你想要彻底摧毁这个计划。(set: $mark to &quot;彻底摧毁&quot;)
 * 你在终端上输入一串指令：
 (b4r:&quot;none&quot;,&quot;none&quot;,&quot;none&quot;,&quot;ridge&quot;)+(b4r-size:1,1,1,4.1)+(b4r-colour:#eee)[sudo dd if=/dev/zero of=/[&lt;span style=&quot;font-style: normal;&quot;&gt;*&lt;/span&gt;]
 sudo rm -rf /[&lt;span style=&quot;font-style: normal;&quot;&gt;*&lt;/span&gt;]]
@@ -493,7 +492,7 @@ sudo rm -rf /[&lt;span style=&quot;font-style: normal;&quot;&gt;*&lt;/span&gt;]]
 [[你静静等待-&gt;等待]]
 
 ---
-&lt;small&gt;[[获取书签]]&lt;small&gt;</tw-passagedata><tw-passagedata pid="37" name="等待" tags="" position="2886.333333333333,2007.0000000000002" size="100,100">* 经过一大串回显，Linux 系统成功地全部崩掉，硬盘里的所有文件也都不复存在。(set: $mark to &quot;等待&quot;)
+&lt;small&gt;[[获取书签]]&lt;small&gt;</tw-passagedata><tw-passagedata pid="36" name="等待" tags="" position="2886.333333333333,2007.0000000000002" size="100,100">* 经过一大串回显，Linux 系统成功地全部崩掉，硬盘里的所有文件也都不复存在。(set: $mark to &quot;等待&quot;)
 * 你成功从记忆危机中解救了人类。
 * 在地下室的主机中，风扇仍在呼呼作响，但它不知道，他为之工作的电子元件将被永远埋葬于这个地下室中，成为记忆修复计划破产的证据之一。
 * 感谢您的游玩，我们下次再见。
